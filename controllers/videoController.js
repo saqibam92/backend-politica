@@ -27,7 +27,7 @@ const generateAudio = async (text) => {
         );
 
         // Save audio file locally
-        const audioPath = `../uploads/audio_${Date.now()}.mp3`;
+        const audioPath = `../config/audio_${Date.now()}.mp3`;
         fs.writeFileSync(audioPath, response.data);
 
         return audioPath;
