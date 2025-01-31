@@ -17,6 +17,9 @@ dbConnect()
 
 // API Routes
 app.use('/api/videos', videoRoutes);
+app.use('/', (req, res) =>{
+  res.status(200).send("<h1>Welcome</h1>")
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
